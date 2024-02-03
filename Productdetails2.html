@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Product List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Product Details</h1>
+</header>
+<main>
+  <!-- Product 1 -->
+  <div class="product-card">
+    <img class="product-image" src="img/Laptop1.webp" alt="Product 1">
+    <div class="product-details">
+      <h3>Laptop</h3>
+      <p>HP Notebook 15-da1xxx 8th Gen Intel Core i7-8550U 1.8 GHz(Upto 4.50GHz) 16GB RAM 1TB(1000GB) Plus 256GB SSD ROM 15.6</p>
+      <p>Price: <b>Ksh. 165,000</b><i> only</i></p>
+      <button class="add-to-cart-button" onclick="showModal()">
+        <span class="cart-icon">🛒</span> Add to Cart
+      </button>
+    </div>
+  </div>
+</main>
+<div class="modal" id="myModal">
+  <div class="modal-content">
+    <p>Item successfully added to your cart!</p>
+    <p>Share your review below</p>
+    <div class="modal-buttons">
+      <a href="index.html" class="modal-button">Continue Shopping</a>
+      <button class="modal-button" onclick="closeModal()">Okay</button>
+    </div>
+  </div>
+</div>
+<div class="user-reviews">
+    <h2>User Reviews</h2>    
+    <ul class="review-list">
+      <li class="review-item">
+        <div class="review-user">John Doe</div>
+        <div class="review-text">This product is amazing! I love it.</div>
+      </li>
+      <li class="review-item">
+        <div class="review-user">Jane Smith</div>
+        <div class="review-text">Great features and fast delivery. Highly recommended.</div>
+      </li>
+      <!-- You can add more reviews as needed -->
+    </ul>
+    <div class="review-form">
+      <h3>Write a Review</h3>
+      <form>
+        <label for="username">Your Name:</label>
+        <input type="text" id="username" name="username" autocomplete="on" required>
+        <label for="review">Your Review:</label>
+        <textarea id="review" name="review" rows="4" autocomplete="on" required></textarea>
+        <button type="submit" class="submit-review-button">Submit Review</button>
+      </form>
+    </div>
+  </div>
+<script>
+  // Script to show and close the modal
+  function showModal() {
+    document.getElementById('myModal').style.display = 'flex';
+  }
+  function closeModal() {
+    document.getElementById('myModal').style.display = 'none';
+  }
+</script>
+</body>
+</html>
